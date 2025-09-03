@@ -7,12 +7,12 @@ public class Main {
     
         SistemaOperacional sistema = new SistemaOperacional(PC);
 
-        Programa programa = new Programa(8, 100, 2000000);
+        Programa programa = new Programa(8, 100, 200);
     
         
-        Programa p1 = new Programa(16, 400, 30000000);
-        Programa p2 = new Programa(8, 450, 2000000);
-        Programa p3 = new Programa(32, 200, 5000000);
+        Programa p1 = new Programa(16, 400, 300);
+        Programa p2 = new Programa(8, 450, 200);
+        Programa p3 = new Programa(32, 200, 500);
 
         sistema.executarPrograma(p1);
         sistema.executarPrograma(p2);
