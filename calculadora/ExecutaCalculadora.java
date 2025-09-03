@@ -1,4 +1,4 @@
-import calculadora.Calculadora;
+package calculadora;
 public class ExecutaCalculadora {
     
     public static void main(String[] args){

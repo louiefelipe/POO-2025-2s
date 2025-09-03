@@ -3,13 +3,11 @@ package atividade1;
 public class Programa {
     private Integer memoriaRAMAlocada;
     private Integer SSDOcupado;
-    private Integer nucleos;
     private Integer quantidadeOperacoes;
 
-    public Programa(Integer memoriaRAMAlocada, Integer SSDOcupado, Integer nuceleos, Integer quantidadeOperacoes){
+    public Programa(Integer memoriaRAMAlocada, Integer SSDOcupado, Integer quantidadeOperacoes){
         this.memoriaRAMAlocada = memoriaRAMAlocada;
         this.SSDOcupado = SSDOcupado;
-        this.nucleos = nuceleos;
         this.quantidadeOperacoes = quantidadeOperacoes;
     }
 
@@ -30,16 +28,6 @@ public class Programa {
     public void setSSDOcupado(Integer SSDOcupado){
         if(SSDOcupado != null && SSDOcupado < 0){
             this.SSDOcupado = SSDOcupado;
-        }
-    }
-
-    public Integer getNucleos(){
-        return this.nucleos;
-    }
-
-    public void setNucleos(Integer nucleos){
-        if(nucleos != null && nucleos < 0){
-            this.nucleos = nucleos;
         }
     }
 
