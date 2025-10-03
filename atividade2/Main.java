@@ -76,7 +76,7 @@ public class Main {
                     System.out.print("Ano de publicação: ");
                     int anoR = sc.nextInt();
                     System.out.print("Edição: ");
-                    int edicao = sc.nextInt();
+                    String edicao = sc.nextLine();
                     sc.nextLine();
                     materiais.add(new Revista(tituloR, anoR, edicao));
                     System.out.println("Revista cadastrada!\n");
