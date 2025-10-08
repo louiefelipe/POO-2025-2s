@@ -8,9 +8,9 @@ public class Usuario extends Pessoa {
 
     @Override
     public void exibirInfo() {
-        System.out.println("Nome: " + getNome());
-        System.out.println("Email: " + getEmail());
-        System.out.println("Matrícula: " + getMatricula());
+        System.out.println("Nome: " + this.getNome());
+        System.out.println("Email: " + this.getEmail());
+        System.out.println("Matrícula: " + this.getMatricula());
     }
 
     public Integer getMatricula() {
@@ -22,3 +22,4 @@ public class Usuario extends Pessoa {
     }
     
 }
+

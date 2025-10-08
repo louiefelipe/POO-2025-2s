@@ -3,9 +3,9 @@ public class Revista extends Material{
 
    
     public void descricao(){
-        System.out.println("Título: " + getTitulo());
-        System.out.println("Ano de Publicação: " + getAnoPublicacao());
-        System.out.println("Edição: " + getEdicao());
+        System.out.println("Título: " + this.getTitulo());
+        System.out.println("Ano de Publicação: " + this.getAnoPublicacao());
+        System.out.println("Edição: " + this.getEdicao());
     }
 
      public Revista(String titulo, Integer anoPublicacao, String edicao) {
