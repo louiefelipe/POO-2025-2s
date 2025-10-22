@@ -9,11 +9,18 @@ public class Main {
         ArrayList<Material> materiais = new ArrayList<>();
         ArrayList<Emprestimo> emprestimos = new ArrayList<>();
 
-        int opcao;
+        
+        //exemplo fixo
+        Instituicao UCB = new Instituicao("UCB", "123456", "Brasilia-DF");
+        Colecao c1 = new Colecao("abobrinha", 2010, "Joao", 10);
+        Emprestimo e1 = new Emprestimo(UCB, c1, "22/10/2025", "27/10/2025");
+        emprestimos.add(e1);
 
+        int opcao;
         do {
             System.out.println("===== SISTEMA DE BIBLIOTECA =====");
-            System.out.println("1 - Cadastrar Usuário");
+            System.out.println("1 - Cadastrar Usuário");8
+            
             System.out.println("2 - Cadastrar Funcionário");
             System.out.println("3 - Listar Pessoas");
             System.out.println("4 - Cadastrar Livro");
