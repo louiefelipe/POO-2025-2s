@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
 
         ArrayList<Pessoa> pessoas = new ArrayList<>();
@@ -19,7 +19,7 @@ public class Main {
         int opcao;
         do {
             System.out.println("===== SISTEMA DE BIBLIOTECA =====");
-            System.out.println("1 - Cadastrar Usuário");8
+            System.out.println("1 - Cadastrar Usuário");
             
             System.out.println("2 - Cadastrar Funcionário");
             System.out.println("3 - Listar Pessoas");
@@ -42,8 +42,19 @@ public class Main {
                     System.out.print("Matrícula: ");
                     int matricula = sc.nextInt();
                     sc.nextLine();
-                    pessoas.add(new Usuario(nomeU, emailU, matricula));
-                    System.out.println("Usuário cadastrado com sucesso!\n");
+                    try {
+                        pessoas.add(new Usuario(nomeU, emailU, matricula));
+                        System.out.println("Usuário cadastrado com sucesso!\n");
+                        
+                    } 
+                    
+                    catch (NomeInvalidoException e) {
+                        System.out.println("Nome Inválido. Tente Novamente");
+                    }
+                    catch (EmailInvalidoException e){
+                        System.out.println("Email Inválido. Tente Novamente");
+                    }
+                    
                     break;
 
                 case 2:
@@ -121,9 +132,15 @@ public class Main {
                     System.out.print("Data de devolução: ");
                     String dataD = sc.nextLine();
 
-                    emprestimos.add(new Emprestimo(pessoas.get(idxUsuario),
+                    try {
+                        emprestimos.add(new Emprestimo(pessoas.get(idxUsuario),
                                                    materiais.get(idxMaterial),
                                                    dataE, dataD));
+                  
+                    } catch (Exception e) {
+                        System.err.println("Algo deu errado. Tente novamente.");
+                    }
+                    
                     System.out.println("Empréstimo cadastrado!\n");
                     break;
 
