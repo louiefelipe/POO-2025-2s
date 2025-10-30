@@ -6,6 +6,11 @@ public class Colecao implements ItemEmprestavel {
     public Colecao(String titulo, Integer anoPublicacao, String proprietario, Integer quantidadeItens) {
         this.proprietario = proprietario;
         this.quantidadeItens = quantidadeItens;
+
+        if (titulo == null || titulo.length() < 3) {
+            throw new ColecaoInvalidaException();
+        }
+
     }
 
     public String getProprietario() {
