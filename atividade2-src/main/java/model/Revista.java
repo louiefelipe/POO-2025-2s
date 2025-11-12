@@ -1,3 +1,5 @@
+package model;
+
 public class Revista extends Material{
     private String edicao;
 

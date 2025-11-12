@@ -1,5 +1,16 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import model.Colecao;
+import model.Emprestimo;
+import model.Funcionario;
+import model.Instituicao;
+import model.Livro;
+import model.Material;
+import model.Pessoa;
+import model.Revista;
+import model.Usuario;
+
+
 
 public class Main {
     public static void main(String[] args) throws Exception {
